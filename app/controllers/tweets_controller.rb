@@ -16,6 +16,16 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
+  def update
+    @tweet = Tweet.find(params[:id])
+    @tweet.message = params[:tweet][:message]
+    if @tweet.save
+      redirect_to @tweet
+    else
+      render :edit
+    end
+  end
+
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
