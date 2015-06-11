@@ -1,4 +1,13 @@
 <article>
-  <%= @tweet.user_name %>
-  <%= @tweet.message %>
+  <div class="name">
+    <%= @tweet.user_name %>
+  </div>
+
+  <div class="message">
+    <%= @tweet.message %>
+  </div>
+
+  <div class='delete'>
+    <%= button_to('Delete this Tweet', "/tweets/#{@tweet.id}", method: 'delete', data: { confirm: 'You sure ?' }) %>
+  </div>
 </article>
