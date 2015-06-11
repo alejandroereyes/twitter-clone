@@ -1,8 +1,13 @@
 <article>
   <ul>
     <% @tweets.each do |tweet| %>
-      <li><%= link_to tweet.message, "/tweets/#{tweet.id}" %></li>
-      <%= tweet.user_name  %>
+
+      <div class="message-all">
+        <li><%= link_to tweet.message, "/tweets/#{tweet.id}" %></li>
+      </div>
+      <div class="name-all">
+        <%= tweet.user_name  %>
+      </div>
     <% end %>
   </ul>
 </article>

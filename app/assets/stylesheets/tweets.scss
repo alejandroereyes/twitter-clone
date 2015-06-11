@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$font: Helvetica;
+
+div {
+  font-family: $font;
+}
+
 div.name {
   width: 200px;
   margin-left: auto;
@@ -24,6 +30,18 @@ div.delete {
   margin-top: 10px;
 }
 
+div.message-all {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
 
+div.name-all {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 
