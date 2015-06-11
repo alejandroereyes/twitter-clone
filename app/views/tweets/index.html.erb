@@ -1,7 +1,8 @@
 <article>
-<ul>
+  <ul>
     <% @tweets.each do |tweet| %>
-      <li><%= render partial: 'shared/tweet', locals: { tweet: tweet } %></li>
+      <li><%= link_to tweet.message, "/tweets/#{tweet.id}" %></li>
+      <%= tweet.user_name  %>
     <% end %>
   </ul>
 </article>
