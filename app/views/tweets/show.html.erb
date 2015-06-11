@@ -7,6 +7,10 @@
     <%= @tweet.message %>
   </div>
 
+  <div class='update'>
+    <%= link_to('Update this Tweet', edit_tweet_path(@tweet)) %>
+  </div>
+
   <div class='delete'>
     <%= button_to('Delete this Tweet', "/tweets/#{@tweet.id}", method: 'delete', data: { confirm: 'You sure ?' }) %>
   </div>

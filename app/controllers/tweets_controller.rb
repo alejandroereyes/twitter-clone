@@ -12,6 +12,10 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
   end
 
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
