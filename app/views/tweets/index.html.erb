@@ -1,0 +1,7 @@
+<article>
+<ul>
+    <% @tweets.each do |tweet| %>
+      <li><%= render partial: 'shared/tweet', locals: { tweet: tweet } %></li>
+    <% end %>
+  </ul>
+</article>
