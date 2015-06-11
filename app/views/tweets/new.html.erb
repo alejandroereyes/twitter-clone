@@ -1,14 +1,15 @@
 <%= form_for(@tweet) do |form| %>
-
+  <section class="new-section">
       <div class="user-name-field">
-      <%= form.text_field :user_name, size: '50x20' %>
+      <%= form.text_field :user_name, placeholder: "Mr. Fantasic", maxlength: 50, size: '30x20' %>
       </div>
 
       <div class='message-field'>
-      <%= form.text_area  :message, size: '120x30' %>
+      <%= form.text_area  :message, placeholder: "My cool tweet", size: '50x10' %>
       </div>
 
       <div class="new-submit">
       <%= form.submit %>
       </div>
-    <% end %>
+      <% end %>
+</section>
