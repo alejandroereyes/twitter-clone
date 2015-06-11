@@ -1,0 +1,14 @@
+<%= form_for(@tweet) do |form| %>
+
+      <div class="user-name-field">
+      <%= form.text_field :user_name, size: '50x20' %>
+      </div>
+
+      <div class='message-field'>
+      <%= form.text_area  :message, size: '120x30' %>
+      </div>
+
+      <div class="new-submit">
+      <%= form.submit %>
+      </div>
+    <% end %>
